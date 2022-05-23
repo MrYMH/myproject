@@ -1,0 +1,197 @@
+@use '../variables/colors/color' as *;
+
+$imagep:"../src/images/icon-paper.svg";
+$ImageR:"../src/images/icon-rock.svg";
+$images:"../src/images/icon-scissors.svg";
+
+
+
+// mixins
+@mixin icon($color ,$Image) {
+    border-color:$color;
+    background-color: #eee;
+    background-image: url($Image);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 5px 6px gray,
+    0px 8px darken($color: $color, $amount: 15px);
+}
+
+@mixin bigshadow ($color) {
+    box-shadow: inset 0px 5px 6px gray,
+    0px 3px darken($color: $color, $amount:10%),
+    0px 0px 0px 40px rgba($color: #ffffff, $alpha: 0.15),
+    0px 0px 0px 60px rgba($color: #ffffff, $alpha: 0.1),
+    0px 0px 0px 80px rgba($color: #ffffff, $alpha: 0.05)
+    ;
+}
+
+.game{
+    display: flex;
+    margin-top: 3.125rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &-you{
+        display: flex;
+        flex-direction: column;
+        margin-right: 2.5rem;
+        .text{
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+
+        }
+        .icon{
+            height: 15.625rem;
+            width: 15.625rem;
+            border-radius: 50%;
+            border-color: transparent;
+            border: 1.5625rem solid;
+            background-size: 50%;
+
+            &--paper{
+                @include icon($Paper-Gradient , $imagep );
+                &--winner{
+                    @include bigshadow($Paper-Gradient);
+                }
+            }
+            &--scissors{
+                @include icon( $Scissors-Gradient, $images );
+                &--winner{
+                    @include bigshadow($Scissors-Gradient);
+                }
+            }
+            &--rock{
+                @include icon( $Rock-Gradient , $ImageR );
+                &--winner{
+                    @include bigshadow($Rock-Gradient);
+                }
+
+            }
+        }
+    }
+
+    &--play{
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+
+        .text{
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.625rem;
+            color: white;
+
+        }
+        .play-again{
+            background-color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.625rem 1.25rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+
+            &:hover{
+                color: red;
+            }
+        }
+    }
+
+
+    &-house{
+        margin-left: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        .text{
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+
+        }
+        .icon{
+            height: 15.625rem;
+            width: 15.625rem;
+            border-radius: 50%;
+            border-color: transparent;
+            border: 1.5625rem solid;
+            background-size: 50%;
+
+            &--paper{
+                @include icon ($Paper-Gradient , $imagep );
+                &--winner{
+                    @include bigshadow($Paper-Gradient);
+                }
+            }
+            &--scissors{
+                @include icon ( $Scissors-Gradient, $images );
+                &--winner{
+                    @include bigshadow($Scissors-Gradient);
+                }
+
+            }
+            &--rock{
+                @include icon ( $Rock-Gradient , $ImageR );
+                &--winner{
+                    @include bigshadow($Rock-Gradient);
+                }
+            }
+        }
+
+        .counter{
+            height: 15.625rem;
+            width:15.625rem;
+            border-radius: 50%;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            font-size: 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+    }
+}
+
+
+// mobile
+
+@media (max-width: 567px){
+    .game{
+        display: flex;
+        margin: 3.125rem 3.5rem;
+        align-items: center;
+        justify-content: center;
+        
+        &-you{
+            .text{
+                font-size: 1rem;
+                font-weight: 300;
+                //margin: 2.5rem;
+    
+            }
+            .icon{
+            width: 10rem;
+            height: 10rem;
+            }
+        }
+        &-house{
+            .text{
+                font-size: 1rem;
+                font-weight: 300;
+                //margin-bottom: 3.5rem;
+    
+            }
+            .icon{
+            width: 10rem;
+            height: 10rem;
+            }
+        }
+        
+    }
+}

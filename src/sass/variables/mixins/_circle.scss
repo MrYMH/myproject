@@ -1,0 +1,19 @@
+// ======================== circle ===============================
+
+@mixin circle  {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    
+}
+
+
+@mixin rounded($r) {
+    border-radius:$r ;
+    -webkit-border-radius:$r ;
+    -moz-border-radius:$r ;
+    -ms-border-radius:$r ;
+    -o-border-radius:$r ;
+}

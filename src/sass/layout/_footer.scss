@@ -1,0 +1,61 @@
+@use '../variables/colors/color' as *;
+
+
+
+.footer{
+    footer{
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px; 
+            text-align: center;
+            span{
+                color: hsl(228, 45%, 44%);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.2deg);
+                }
+            }
+            
+        }
+        button{
+            position: absolute;
+            bottom: -1px;
+            padding: 0.4375rem 1.5625rem;
+            right: 1rem;
+            border-radius: 0.4rem;
+            border: 3px solid $Header-Outline;
+            color: lighten($color: $Header-Outline, $amount:20%);
+            background: none;
+            font-weight: 600;
+            letter-spacing: 2px;
+
+            &:hover{
+                background-color: rgba($color: #ffffff, $alpha: 0.8);
+                color: $Dark-Text;
+                cursor: pointer;
+
+            }
+        }
+    }
+}
+
+
+// mobile
+
+@media(max-width: 565px){
+    .footer{
+        footer{
+            .text{
+                position: relative;
+                left:50%;
+            }
+            button{
+                bottom: -358px;
+                padding: 0.4375rem 1.5625rem;
+                right: 11rem;
+            }
+        }
+    }
+}

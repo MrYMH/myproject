@@ -1,0 +1,8 @@
+@use './sass/global/global-rules' as *;
+
+@use "./sass/layout/header" as *;
+
+@use "sass/layout/play" as *;
+@use "sass/layout/game" as *;
+@use "sass/layout/footer" as *;
+@use "sass/layout/modal" as *;

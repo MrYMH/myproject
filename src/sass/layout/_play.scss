@@ -1,0 +1,77 @@
+@use '../variables/colors/color' as *;
+
+$imagep:"../src/images/icon-paper.svg";
+$ImageR:"../src/images/icon-rock.svg";
+$images:"../src/images/icon-scissors.svg";
+
+
+// mixins
+@mixin icon($color ,$Image) {
+    border-color:$color;
+    background-color: #eee;
+    background-image: url($Image);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 5px 6px gray,
+    0px 0.5rem darken($color: $color, $amount: 15px);
+}
+
+.play{
+    min-height: calc(100vh -9.375rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 9.375rem 34.375rem;
+    position: relative;
+    .traingle{
+        position: absolute;
+        align-self: center;
+        margin-top:4.375rem;
+        left: -18.75rem;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        .icon{
+            height:10rem;
+            width: 10rem;
+            border-radius: 50%;
+            z-index: 9999;
+            border: 1rem solid;
+            transition: transform 0.4s;
+            
+            &--rock{
+                transform: translateX(-18rem) translateY(9rem);
+                @include icon($Rock-Gradient, $ImageR );
+                &:hover{
+                    transform: scale(1.1) translateX(-18rem) translateY(9rem);
+                }
+ 
+            }
+            &--scissors{
+                transform: translateX(-1rem) translateY(-5rem);
+                @include icon($Scissors-Gradient, $images);
+                &:hover{
+                    transform: scale(1.1) translateX(-1rem) translateY(-5rem);
+                }
+            }
+            &--paper{
+                transform: translateX(-7rem) translateY(-5rem);
+                @include icon($Paper-Gradient, $imagep);
+                &:hover{
+                    transform: scale(1.1) translateX(-7rem) translateY(-5rem);
+                }
+
+            }
+
+        }
+    }
+}
+
+// mobile
+
+@media(max-width: 565px){
+    .play{
+        margin: 20rem 18rem;
+    }
+}

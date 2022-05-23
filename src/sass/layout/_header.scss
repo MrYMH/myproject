@@ -1,0 +1,48 @@
+@use '../variables/colors/color' as *;
+
+.header{
+    min-width:37.5rem;
+    max-height: 9.375rem;
+    border: 2px solid  $Header-Outline;
+    border-radius: 0.625rem;
+    //position: relative;
+    .contain{
+        margin: 1.25rem 3.75rem;
+        display: flex;
+        justify-content: space-between;
+        .score{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #eee;
+            padding: 0.5rem;
+            border-radius: 6px;
+            .score-header{
+                color: $Score-Text;
+                text-align: center;
+            }
+            .score-value{
+                color: $Dark-Text;
+                font-size: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+// mobile
+
+@media(max-width: 565px){
+    .header{
+        min-width:30.5rem;
+        //transform: translateX(-7rem) ;
+        position: relative;
+        //top: 50%;
+        left: -7rem;
+        .contain{
+            margin: 1.25rem 2rem;
+        }
+    }
+}

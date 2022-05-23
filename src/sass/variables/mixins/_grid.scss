@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+}
+
+$grid_cols: 12;
+
+@for $i from 1 through $grid_cols{
+    .grid-col-#{$i}{
+        grid-column: $i / $grid_cols;
+    }
+}
+
+.flex{
+    display: flex;
+}
