@@ -1,7 +1,7 @@
 {
   "main.css": "/myproject/static/css/main.ddee9884.chunk.css",
-  "main.js": "/myproject/static/js/main.135762f4.chunk.js",
-  "main.js.map": "/myproject/static/js/main.135762f4.chunk.js.map",
+  "main.js": "/myproject/static/js/main.c3a64fb9.chunk.js",
+  "main.js.map": "/myproject/static/js/main.c3a64fb9.chunk.js.map",
   "static/js/1.7f8c91dd.chunk.js": "/myproject/static/js/1.7f8c91dd.chunk.js",
   "static/js/1.7f8c91dd.chunk.js.map": "/myproject/static/js/1.7f8c91dd.chunk.js.map",
   "static/js/2.cda04b4f.chunk.js": "/myproject/static/js/2.cda04b4f.chunk.js",
@@ -12,9 +12,9 @@
   "static/media/bg-triangle.svg": "/myproject/static/media/bg-triangle.1fd44bdf.svg",
   "static/media/icon-close.svg": "/myproject/static/media/icon-close.919ab92a.svg",
   "static/media/image-rules.svg": "/myproject/static/media/image-rules.5d74d25d.svg",
-  "static/media/App.css": "/myproject/static/media/icon-paper.69a8c2e9.svg",
+  "static/media/App.css": "/myproject/static/media/icon-scissors.bec2f9b3.svg",
   "static/css/main.ddee9884.chunk.css.map": "/myproject/static/css/main.ddee9884.chunk.css.map",
   "index.html": "/myproject/index.html",
-  "precache-manifest.d6f9d1461d335f525c6328f343110976.js": "/myproject/precache-manifest.d6f9d1461d335f525c6328f343110976.js",
+  "precache-manifest.e0f3fc4a218e52b768a28bb074c71838.js": "/myproject/precache-manifest.e0f3fc4a218e52b768a28bb074c71838.js",
   "service-worker.js": "/myproject/service-worker.js"
 }
