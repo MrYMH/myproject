@@ -14,8 +14,8 @@ function App() {
         <div className='container'>
           <Header score = {Score}/>
           <Routes>
-            <Route exact path="/" element={<Play setMyChoice ={setMyChoice}/>} />
-            <Route path="/game" element={<Game MyChoice={MyChoice} score = {Score} setscore = {setScore}/>} />
+            <Route exact path="http://MrYMH.github.io/myproject/" element={<Play setMyChoice ={setMyChoice}/>} />
+            <Route path="http://MrYMH.github.io/myproject/game" element={<Game MyChoice={MyChoice} score = {Score} setscore = {setScore}/>} />
           </Routes>
         </div>
         <Footer />
