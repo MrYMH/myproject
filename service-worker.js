@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-RPS-Game_upload/precache-manifest.5a62f7da6ed55fe08300c794cb1c692e.js"
+  "/react-RPS-Game/precache-manifest.126ffab2f29674308d9ec1ccd7809ebb.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/react-RPS-Game_upload/index.html", {
+workbox.routing.registerNavigationRoute("/react-RPS-Game/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
